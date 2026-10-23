@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Language and culture in socialization: tree diagram</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--ink:#18212f;--mute:#64708a;--line:#b9c2d3;--a:#3451d1;--b:#b4531a;--g:#0e7c6b;--hit:#f2b705;--root:#18212f;--ui:#e6eaf1;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151f;--card:#1a2232;--ink:#e8ecf4;--mute:#93a0ba;--line:#3b4760;--a:#8ea2ff;--b:#f0925a;--g:#4fd1b8;--root:#e8ecf4;--ui:#252f44}}
+:root[data-theme="dark"]{--bg:#10151f;--card:#1a2232;--ink:#e8ecf4;--mute:#93a0ba;--line:#3b4760;--a:#8ea2ff;--b:#f0925a;--g:#4fd1b8;--root:#e8ecf4;--ui:#252f44}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.4 "Instrument Sans",system-ui,sans-serif}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+header{padding:20px 20px 4px}
+h1{font-size:22px;font-weight:600;margin:0 0 2px;letter-spacing:-.01em}
+header p{margin:0;color:var(--mute);max-width:70ch}
+.bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:12px 20px}
+.grp{display:flex;align-items:center;gap:6px}
+.grp>span{color:var(--mute);font-size:13px;margin-right:2px}
+.seg{display:flex;background:var(--ui);border-radius:8px;padding:2px}
+button,input{font:inherit;color:inherit}
+.seg button,.act{border:0;background:transparent;padding:5px 10px;border-radius:6px;cursor:pointer}
+.act{background:var(--ui);padding:6px 11px}
+.seg button.on{background:var(--card);box-shadow:0 0 0 1px var(--line);font-weight:600}
+.seg button:hover,.act:hover{background:var(--card)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+input[type=search]{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 10px;width:190px}
+.stat{color:var(--mute);font-size:13px;margin-left:auto}
+#wrap{margin:0 20px 20px;border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:auto;height:calc(100vh - 190px);min-height:380px}
+#inner{width:max-content;padding:0 14px 20px}
+#lv{display:flex;position:sticky;top:0;z-index:3;background:var(--card);padding:10px 0 8px;border-bottom:1px solid var(--line);margin-bottom:10px}
+#lv button{flex:none;margin-right:28px;border:0;border-bottom:3px solid var(--line);background:transparent;text-align:left;padding:2px 0 4px;color:var(--mute);cursor:pointer;font-size:12px}
+#lv button.on{border-color:var(--ink);color:var(--ink);font-weight:600}
+.n{display:flex;align-items:center}
+.kids{position:relative;display:flex;flex-direction:column;margin-left:14px}
+.kids::before{content:"";position:absolute;left:-14px;top:50%;width:14px;border-top:1px solid var(--line)}
+.k{position:relative;padding:3px 0 3px 14px}
+.k::before{content:"";position:absolute;left:0;top:50%;width:14px;border-top:1px solid var(--line)}
+.k::after{content:"";position:absolute;left:0;top:0;bottom:0;border-left:1px solid var(--line)}
+.k:first-child::after{top:50%}.k:last-child::after{bottom:50%}.k:only-child::after{display:none}
+.box{flex:none;display:flex;gap:6px;align-items:flex-start;text-align:left;border:1px solid var(--c);border-left-width:5px;border-radius:7px;background:color-mix(in srgb,var(--c) 9%,var(--card));padding:5px 8px;font-size:12px;line-height:1.35;cursor:pointer}
+.box.leaf{cursor:default;background:color-mix(in srgb,var(--c) 14%,var(--card))}
+.box:hover:not(.leaf){background:color-mix(in srgb,var(--c) 18%,var(--card))}
+.box .t{flex:1}
+.box small{display:block;color:var(--mute);font-size:11px}
+.box .pl{flex:none;font-size:11px;font-weight:600;color:var(--c);border:1px solid var(--c);border-radius:10px;padding:0 6px;margin-top:1px}
+.bA{--c:var(--a)}.bB{--c:var(--b)}.bG{--c:var(--g)}
+.box.root{--c:var(--root);background:var(--root);color:var(--card);font-weight:600;font-size:13px}
+.box.root small,.box.root .pl{color:var(--card);border-color:var(--card)}
+.box.hit{box-shadow:0 0 0 3px var(--hit)}
+mark{background:var(--hit);color:#18212f;border-radius:2px}
+.key{display:flex;gap:14px;padding:0 20px 4px;color:var(--mute);font-size:12px;flex-wrap:wrap}
+.key i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+</style>
+</head>
+<body>
+<header>
+<h1>Language and culture in socialization</h1>
+<p>Click a box to open or close it. Use the level buttons to show the tree down to any depth.</p>
+</header>
+<div class="bar">
+<div class="grp"><span>Show to level</span><div class="seg" id="lvBtns"></div></div>
+<div class="grp"><button class="act" id="exp">Expand all</button><button class="act" id="col">Collapse all</button></div>
+<div class="grp"><span>Branch</span><div class="seg" id="brBtns"><button data-b="all" class="on">Both</button><button data-b="A">A language</button><button data-b="B">B culture</button></div></div>
+<div class="grp"><input type="search" id="q" placeholder="Find a node" aria-label="Find a node"></div>
+<div class="grp"><button class="act" id="zo" aria-label="Zoom out">−</button><span id="zl" style="min-width:38px;text-align:center">100%</span><button class="act" id="zi" aria-label="Zoom in">+</button><button class="act" id="fit">Fit width</button></div>
+<div class="stat" id="stat"></div>
+</div>
+<div class="key"><span><i style="background:var(--a)"></i>Branch A: language</span><span><i style="background:var(--b)"></i>Branch B: culture</span><span><i style="background:var(--g)"></i>Action</span></div>
+<div id="wrap"><div id="inner"><div id="lv"></div><div id="tree"></div></div></div>
+<script>
+var k=0,W=[0,150,150,160,175,185,185,205];
+function n(l){var c=[].slice.call(arguments,1).map(function(x){return typeof x==="string"?{l:"Action "+(++k)+"|"+x,c:[]}:x});return{l:l,c:c}}
+var D=n("Root|Challenges of different languages and cultures on socialization",
+n("A|Language and communication barriers",
+ n("A1|Vocabulary differences",
+  n("A1.1|Not understanding local slang and memes",
+   n("A1.1.a|Cannot get the joke in group chats",
+    n("A1.1.a.i|Feeling inferior and isolating oneself","Ask friends for 3 hot topics before the party","Agree on a special hand sign for “explain the joke”"),
+    n("A1.1.a.ii|Being misunderstood as cold or unfriendly","Prepare a self-deprecating intro","Use a logic game you are good at to break the ice")),
+   n("A1.1.b|Misunderstanding sarcasm leading to wrong reactions",
+    n("A1.1.b.i|Awkward silence in conversations","Confess you don’t get sarcasm and ask for directness","Shift the focus to an extrovert"),
+    n("A1.1.b.ii|Starting unnecessary arguments","Set a “literal meaning only” safety rule","Pause the chat for 5 minutes when angry"))),
+  n("A1.2|Lack of daily vocabulary, overusing academic words",
+   n("A1.2.a|Sounding stiff and boring in daily chats",
+    n("A1.2.a.i|Hard to make close personal friends","Practice and use one slang word daily","Join non-academic hobby clubs"),
+    n("A1.2.a.ii|Conversations turn into one-way lectures","Set an “ask more, answer less” rule","Carry topic cards to limit academic talk time")),
+   n("A1.2.b|Unable to express complex emotions",
+    n("A1.2.b.i|Using the wrong words causes serious misunderstandings","Use emojis or stickers online to show feelings","Draw or use simple visual metaphors offline"),
+    n("A1.2.b.ii|Holding back feelings causes depression","Keep a private diary in your mother tongue","Talk to friends who speak your native language regularly")))),
+ n("A2|Pronunciation and listening failures",
+  n("A2.1|Heavy accent causing misunderstandings",
+   n("A2.1.a|Need to repeat sentences often",
+    n("A2.1.a.i|Losing the desire to speak and giving up","Use a phone memo app to type instead","Write an outline before speaking complex ideas"),
+    n("A2.1.a.ii|The listener loses patience and ends the chat","Practice perfect pronunciation for common words","Use exaggerated body language to help explain")),
+   n("A2.1.b|Treated as an outsider or underestimated",
+    n("A2.1.b.i|Ignored in work or academic discussions","Send your written points before the meeting starts","Stand by the whiteboard to lead the writing"),
+    n("A2.1.b.ii|Facing microaggressions","Keep a notebook to record bad comments","Gather proof and report to HR or tutor"))),
+  n("A2.2|Others speaking too fast to understand",
+   n("A2.2.a|Nodding blindly in agreement",
+    n("A2.2.a.i|Agreeing to things you don’t want to do","Practice saying “Sorry, can you speak slower?”","Text them later to confirm the details"),
+    n("A2.2.a.ii|Missing important work or social information","Summarize key points to the person after chatting","Use a voice-to-text app in important events")),
+   n("A2.2.b|Brain freeze from listening fatigue",
+    n("A2.2.b.i|Avoiding long conversations","Break long meetings into 15-minute short ones","Use a “need water” excuse to take a break"),
+    n("A2.2.b.ii|Losing focus completely during team meetings","Volunteer as the timekeeper to force focus","Keep strong mints with you to stay awake"))))),
+n("B|Cultural and behavioral norms conflicts",
+ n("B1|Personal boundaries and privacy differences",
+  n("B1.1|Different rules for social distance and physical touch",
+   n("B1.1.a|They use hugs to break the ice",
+    n("B1.1.a.i|Feeling physically disgusted and freezing up","Step forward and offer a handshake first","Joke that you really need personal space"),
+    n("B1.1.a.ii|Misunderstood as cold or unfriendly","Use warm words and big smiles to make up for it","Share snacks instead of using physical touch")),
+   n("B1.1.b|They ask private questions randomly",
+    n("B1.1.b.i|Feeling offended and showing a bad mood","Give a playful answer like “Guess?”","Ask “What about you?” to bounce the topic back"),
+    n("B1.1.b.ii|Answering awkwardly and regretting it later","Set a mental “safe word” to trigger a refusal","Say it’s a top secret in your culture"))),
+  n("B1.2|Shared space (dorm or desk) territory conflicts",
+   n("B1.2.a|They touch your things without asking",
+    n("B1.2.a.i|Suffering in silence and feeling stressed","Buy lockable boxes to hide items","Put bright red name tags on private things"),
+    n("B1.2.a.ii|Exploding in anger and starting a fight","Sign a shared items agreement on day one","Mark a sharing zone and ban touching elsewhere")),
+   n("B1.2.b|Different sleep schedules and noise limits",
+    n("B1.2.b.i|Lack of sleep kills your social energy","Buy industrial earplugs and sleep masks","Change your deep sleep time based on their noise habits"),
+    n("B1.2.b.ii|Making revenge noise and ruining the relationship","Set strict quiet hours (e.g., 11 PM to 7 AM)","Ask a third party (RA or tutor) to help solve it")))),
+ n("B2|Time concept differences (punctual vs. flexible)",
+  n("B2.1|Waiting friction caused by being late to gatherings",
+   n("B2.1.a|They think being 30 minutes late is normal",
+    n("B2.1.a.i|Feeling angry about wasted time","Define clearly if the time is fixed or flexible","Wait at a cafe with your laptop to work"),
+    n("B2.1.a.ii|They think you are too pushy","Show up 30 minutes late on purpose to match them","Text them 1 hour before to check their progress")),
+   n("B2.1.b|Sudden cancellations or schedule changes",
+    n("B2.1.b.i|Feeling disrespected","Set a penalty for cancelling (e.g., buy milk tea)","Only agree on general plans, not strict times"),
+    n("B2.1.b.ii|Your whole day gets ruined","Prepare a solo backup plan just in case","Never make their invitation the main event of your day"))),
+  n("B2.2|Different understandings of deadlines",
+   n("B2.2.a|Teammates rush work at the last minute",
+    n("B2.2.a.i|You feel anxious about losing control","Set an internal fake deadline 2 days early","Break the big task into daily mini-goals"),
+    n("B2.2.a.ii|Bad quality work hurts team grades","Take over the final check and editing job yourself","Ask them to submit drafts step by step")),
+   n("B2.2.b|Working overtime vs. leaving on time culture",
+    n("B2.2.b.i|Thinking they are selfish for leaving on time","Clarify working hours and duties clearly","Accept the culture difference without judging them"),
+    n("B2.2.b.ii|You overwork to finish everything alone","Force yourself to shut down the computer on time","Report the lack of manpower to your boss honestly"))))));
+var S={lv:4,br:"all",q:"",z:1},$=function(i){return document.getElementById(i)},total=0,vis=0,hits=0,deep=1;
+function walk(x,lv,br,f){x.lv=lv;x.br=lv===2?x.l.split("|")[0]:br;x.leaf=!x.c.length;if(x.leaf)x.g=1;f&&f(x);x.c.forEach(function(c){walk(c,lv+1,x.br,f)})}
+walk(D,1,"",function(){total++});
+function all(x,f){f(x);x.c.forEach(function(c){all(c,f)})}
+function cnt(x){var s=0;all(x,function(){s++});return s-1}
+function setLevel(N){S.lv=N;all(D,function(x){x.open=x.lv<N});render()}
+function esc(s){return s.replace(/[&<>]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[m]})}
+function mk(x){
+ vis++;if(x.lv>deep)deep=x.lv;
+ var d=document.createElement("div"),p=x.l.split("|"),id=p[0],lb=p[1],b=document.createElement("button");
+ d.className="n"+(x.lv>1?" k":"");
+ var kids=x.open?x.c.filter(function(c){return!(x.lv===1&&S.br!=="all"&&c.br!==S.br)}):[];
+ var hit=S.q&&(id+" "+lb).toLowerCase().indexOf(S.q)>-1;if(hit)hits++;
+ var t=esc(lb);if(hit){var i=lb.toLowerCase().indexOf(S.q);if(i>-1)t=esc(lb.slice(0,i))+"<mark>"+esc(lb.slice(i,i+S.q.length))+"</mark>"+esc(lb.slice(i+S.q.length))}
+ b.className="box "+(x.lv===1?"root":x.g?"bG":"b"+x.br)+(x.leaf?" leaf":"")+(hit?" hit":"");
+ b.style.width=W[x.lv]+"px";
+ b.innerHTML='<span class="t">'+(x.lv>1&&!x.g?"<small>"+id+"</small>":x.g?"<small>"+id+"</small>":"")+t+"</span>"+(!x.leaf&&!x.open?'<span class="pl">+'+cnt(x)+"</span>":"");
+ if(!x.leaf){b.setAttribute("aria-expanded",x.open?"true":"false");b.onclick=function(){x.open=!x.open;S.lv=null;render()}}
+ d.appendChild(b);
+ if(kids.length){var u=document.createElement("div");u.className="kids";kids.forEach(function(c){u.appendChild(mk(c))});d.appendChild(u)}
+ return d}
+function render(){
+ vis=0;hits=0;deep=1;var tr=$("tree");tr.innerHTML="";tr.appendChild(mk(D));
+ var h="";for(var l=1;l<=7;l++)h+='<button data-l="'+l+'" style="width:'+W[l]+'px" class="'+(l<=deep?"on":"")+'">Level '+l+"</button>";
+ $("lv").innerHTML=h;
+ [].forEach.call($("lv").children,function(e){e.onclick=function(){setLevel(+e.dataset.l)}});
+ [].forEach.call($("lvBtns").children,function(e){e.classList.toggle("on",S.lv===+e.dataset.l)});
+ $("stat").textContent="Showing "+vis+" of "+total+" boxes"+(S.q?" · "+hits+" match"+(hits===1?"":"es"):"");
+ $("inner").style.zoom=S.z;$("zl").textContent=Math.round(S.z*100)+"%"}
+for(var l=1;l<=7;l++){var e=document.createElement("button");e.textContent=l;e.dataset.l=l;e.onclick=function(){setLevel(+this.dataset.l)};$("lvBtns").appendChild(e)}
+$("exp").onclick=function(){setLevel(8)};$("col").onclick=function(){setLevel(1)};
+[].forEach.call($("brBtns").children,function(e){e.onclick=function(){S.br=e.dataset.b;[].forEach.call($("brBtns").children,function(x){x.classList.toggle("on",x===e)});render()}});
+function reveal(x){var f=false;x.c.forEach(function(c){if(reveal(c))f=true});
+ var s=x.l.toLowerCase().replace("|"," "),self=s.indexOf(S.q)>-1;if(f)x.open=true;return f||self}
+$("q").oninput=function(){S.q=this.value.trim().toLowerCase();if(S.q){S.lv=null;reveal(D)}render()};
+function zoom(v){S.z=Math.max(.4,Math.min(1.6,v));render()}
+$("zi").onclick=function(){zoom(S.z*1.15)};$("zo").onclick=function(){zoom(S.z/1.15)};
+$("fit").onclick=function(){$("inner").style.zoom=1;zoom(Math.min(1,($("wrap").clientWidth-20)/$("inner").scrollWidth))};
+setLevel(4);
+</script>
+</body>
+</html>
